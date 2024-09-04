@@ -2,12 +2,12 @@
 include('connection/db.php');
 include('include/my_profile.php');
 error_reporting(0);
-$query=mysqli_query($conn, "select * from profile where user_email='{$_SESSION['email']} '");
+$query=mysqli_query($conn, "select * from profiles where user_email='{$_SESSION['email']}'");
 while ($row=mysqli_fetch_array($query)) {
 $img=$row['img'];
 
 $name=$row['name'];
-$skill=$row['skill']
+$skill=$row['skill'];
 $number=$row['number'];
 $email=$row['email'];
 }

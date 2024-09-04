@@ -7,29 +7,9 @@ $query=mysqli_query($conn,"select * from  job_category");
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
+</div>
           	<!-- <p class="mb-4 mt-5 pt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We have <span class="number" data-number="25">0</span> great job offers you deserve!</p> -->
-            <p class="mb-4 mt-5 pt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> <span class="number" >
-            <?php
-
-print "<h3></h3>";
-$fname = "counter1.txt";
-$fp = fopen($fname, "r");
-$hitts = fscanf($fp, "%d");
-fclose($fp);
-
-if (!isset($_COOKIE["visited"])) {
-  $hitts[0]++;
-  $fp = fopen($fname, "w");
-  fprintf($fp, "%d", $hitts[0]);
-  fclose($fp);
-  setcookie("visited", "true", time() + 3600);  // set cookie for 1 hour
-}
-
-
-print "<h2>Total Page Views <h2>".$hitts[0];
-
-?> 
-</span></p>
+        
             <h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Your Dream <br><span>Job is Waiting</span></h1>
 
 						<div class="ftco-search">

@@ -52,7 +52,7 @@ if (isset($_POST['submit'])){
 $email=$_POST['email'];
  $pass=$_POST['password'];
 
-$query=mysqli_query($conn,"select * from admin_login where admin_email='$email' and       admin_password='$pass' and admin_type='2' ");
+$query=mysqli_query($conn,"select * from admin_login where admin_email='$email' and admin_password='$pass' and admin_type='2' ");
 if($query) {
 
   if (mysqli_num_rows($query)>0) {
